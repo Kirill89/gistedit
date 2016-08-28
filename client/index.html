@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>gistedit</title>
+  <script src="index.js"></script>
+  <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="layout">
+  <div class="tools container-column">
+    <button class="btn btn-default save" title="Update file">
+      <span class="glyphicon glyphicon-floppy-open"></span>
+    </button>
+
+    <a href="#" target="_blank" class="btn btn-default open" role="button" title="Open gist on github">
+      <span class="glyphicon glyphicon-share"></span>
+    </a>
+
+    <button class="btn btn-default" title="Settings" data-toggle="modal" data-target=".settings-dlg">
+      <span class="glyphicon glyphicon-cog"></span>
+    </button>
+  </div>
+  <div class="editor-container container-column">
+    <textarea class="editor"></textarea>
+  </div>
+  <div class="resize container-column">
+
+  </div>
+  <div class="preview-container container-column">
+    <div class="preview"></div>
+  </div>
+</div>
+
+<div class="modal fade settings-dlg" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Settings</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Token</label>
+          <input type="text" class="form-control settings-dlg-token">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary settings-dlg-save" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

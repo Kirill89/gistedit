@@ -1,0 +1,84 @@
+// Core variables and mixins
+@import "../node_modules/bootstrap/less/variables.less";
+@icon-font-path: 'fonts/';
+@import "../node_modules/bootstrap/less/mixins.less";
+
+// Reset and dependencies
+@import "../node_modules/bootstrap/less/normalize.less";
+@import "../node_modules/bootstrap/less/glyphicons.less";
+
+// Core CSS
+//@import "../node_modules/bootstrap/less/scaffolding.less";
+@import "../node_modules/bootstrap/less/type.less";
+@import "../node_modules/bootstrap/less/code.less";
+@import "../node_modules/bootstrap/less/grid.less";
+@import "../node_modules/bootstrap/less/tables.less";
+@import "../node_modules/bootstrap/less/forms.less";
+@import "../node_modules/bootstrap/less/buttons.less";
+
+// Components
+@import "../node_modules/bootstrap/less/component-animations.less";
+@import "../node_modules/bootstrap/less/close.less";
+
+// Components w/ JavaScript
+@import "../node_modules/bootstrap/less/modals.less";
+
+// Utility classes
+@import "../node_modules/bootstrap/less/utilities.less";
+@import "../node_modules/bootstrap/less/responsive-utilities.less";
+
+// CodeMirror
+@import (inline) "../node_modules/codemirror/lib/codemirror.css";
+@import (inline) "../node_modules/codemirror/theme/base16-light.css";
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+.layout {
+  display: table;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container-column {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.tools {
+  text-align: center;
+  width: 50px;
+  background: darkgray;
+  padding-top: 10px;
+}
+
+.resize {
+  cursor: col-resize;
+  width: 5px;
+  background: lightgray;
+}
+
+.editor-container {
+  width: 400px;
+}
+
+.CodeMirror {
+  height: 100%;
+  width: 400px;
+}
+
+.preview-spacer {
+  height: 10px;
+}
+
+.preview {
+  margin-left: 20px;
+  margin-right: 20px;
+}

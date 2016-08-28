@@ -1,0 +1,39 @@
+{
+  "name": "gistedit",
+  "version": "1.0.0",
+  "description": "Simplest gists editor with live markdown preview",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "browserify": "browserify client/index.js -t [ babelify --presets [ es2015 ] ] | uglifyjs -c > public/index.js",
+    "less": "lessc -x client/index.less public/index.css",
+    "html": "cp client/index.html public/index.html",
+    "fonts": "cp -rf node_modules/bootstrap/fonts/ public/fonts/",
+    "build": "mkdir -p public && npm run fonts && npm run browserify && npm run less && npm run html",
+    "start": "node index.js",
+    "watch": "node support/watch_dev.js"
+  },
+  "keywords": [
+    "gist",
+    "markdown",
+    "editor"
+  ],
+  "author": "Kirill Efimov <kirill89@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "codemirror": "^5.18.2",
+    "express": "^4.14.0",
+    "express-request-proxy": "^2.0.0",
+    "jquery": "^3.1.0",
+    "markdown-it": "^7.0.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "eslint": "^3.4.0",
+    "less": "^2.7.1",
+    "uglifyify": "^3.0.2"
+  }
+}
